@@ -40,7 +40,7 @@ var project = [
 function getProjects() {
     var projectContainer = $("#projects");
     for (var i = 0 ; i < project.length ; i++) {
-        var projectBlock = "<div id='" + i + "' class='mx-auto col-xl-3 col-lg-4 col-md-6 border p-3 project'>" +
+        var projectBlock = "<div id='" + i + "' class='mx-auto col-xl-4 col-lg-6 col-md-12 p-3 project'>" +
         "<div class='row'><h3 class='mx-auto'>" + project[i].title + "</h3></div><img class='img-fluid' src='" + project[i].image +
         "' alt='" + project[i].title + "' /><div class='row mt-3'><button class='mx-auto btn btn-dark'>Find Out More</button></div></div>";
         projectContainer.append(projectBlock);

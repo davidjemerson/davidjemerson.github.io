@@ -1,11 +1,35 @@
 body {
     padding-top: 5em;
+    font-family: 'Karla', sans-serif;
 }
 
-main {
-    font-family: 'Bellefair', serif;
+footer {
+    background-color: #28464B;
 }
 
-h1 {
-    font-family: 'Poiret One', cursive;
+#contact {
+    background-color: #28464B;
+}
+
+#projBg {
+    background-color: #2C8C99;
+}
+
+#foldTransition {
+    background-image: linear-gradient(white, #2C8C99);
+    height: 250px;
+}
+
+#footerTransition {
+    background-image: linear-gradient(#2C8C99, #28464B);
+    height: 250px;
+    margin-top: -125px;
+}
+
+#projParent {
+    margin-top: -50px;
+}
+
+#projTitle {
+    margin-top: -25px;
 }
