@@ -7,7 +7,7 @@
     <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Karla" rel="stylesheet">
 </head>
 
 <!-- This is the modal template for projects -->
@@ -50,61 +50,126 @@
 </div>
 
 <!-- Layout Begins -->
-<body id="about">
+<body>
 
     <!-- Navbar -->
-    <nav class="navbar fixed-top justify-content-between bg-white py-4 px-5">
-        <img src="./assets/images/blackmono.png" width="75px" alt=""/>
-        <h2>David Emerson</h2>
-        <a class="btn btn-outline-dark" href="#contact">Contact Info</a>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img id="navLogo" src="./assets/images/blackmono.png" class="img-fluid" alt=""/>
+                David Emerson
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Resume</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
     <!-- Intro Container -->
     <main>
-        <div class="container-fluid">
-            <div class="row mt-5">
+        <div id="about" class="container">
+            <div class="row">
                 <div class="col-12 text-center">
                     <h1>Full-stack web developer and problem solver</h1>
                     <img class="mt-4 rounded-circle mx-auto" src="./assets/images/me.png" alt="me" width="225px" height="225px"/>
                 </div>
             </div>
             <div class="row mt-5">
-                <div class="col-md-10 col-lg-8 col-xl-6 mx-auto text-center">
-                    <h4>I'm a Kansas City area based web developer who enjoys making challenging designs and intuitive interfaces a reality in the browser.</h4>
-                    <h4>When I'm not tinkering with the front end, I enjoy building custom data-driven solutions on the back end, bringing web application functionality to life.</h4>
-                    <h4>In the event my fingers aren't dancing across the keys writing code, I'm an avid gamer, woodworker, and maker of bacon.</h4>
+                <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 mx-auto text-center">
+                    <p>I'm a Kansas City area based web developer who enjoys making challenging designs and intuitive interfaces a reality in the browser.</p>
+                    <p>When I'm not tinkering with the front end, I enjoy building custom data-driven solutions on the back end, bringing web application functionality to life.</p>
+                    <p>In the event my fingers aren't dancing across the keys writing code, I'm an avid gamer, woodworker, and maker of bacon.</p>
                 </div>
             </div>
-            <div id="foldTransition" class="row">
+        </div>
+
+        <!-- Skills -->
+
+        <div id="skills" class="container-fluid">
+            <div class="row">
+                <div class="col-4 mx-auto text-center section-title">
+                    <h2>SKILLS</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-10">
+                    <div class="row">
+                        <div class="col-5 text-center">
+                            <h4>Front End</h4>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>React</li>
+                                <li>JavaScript</li>
+                                <li>jQuery</li>
+                                <li>Bootstrap</li>
+                                <li>Materialize</li>
+                                <li>Clean UIs</li>
+                            </ul>
+                        </div>
+                        <div class="col-5 text-center">
+                            <h4>Back End</h4>
+                            <ul>
+                                <li>Node</li>
+                                <li>Express</li>
+                                <li>MongoDB</li>
+                                <li>Mongoose</li>
+                                <li>MySQL</li>
+                                <li>Sequelize</li>
+                                <li>Passport</li>
+                                <li>RESTful APIs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- Projects Container -->
-        <div id="projBg" class="container-fluid">
+        <div id="portfolio" class="container-fluid">
+            <div class="row">
+                <div class="col-4 mx-auto text-center section-title">
+                    <h2>PORTFOLIO</h2>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-1"></div>
-                <div id="projParent" class="col-10 bg-white rounded">
-                    <div class="row">
-                        <div class="col-md-3 col-lg-4"></div>
-                        <h2 id="projTitle" class="text-center col-md-6 col-lg-4 bg-dark rounded py-2 text-white">Past Projects</h2>
-                    </div>
+                <div id="projParent" class="col-10">
                     <!-- Dynamic Project Row -->
-                    <div id="projects" class="row p-3">
+                    <div id="projects" class="row">
                         <!-- Project Tiles Will Go Here -->
                     </div>
                 </div>
             </div>
         </div>
-        <div id="footerTransition"></div>
-        <div id="contact" class="container-fluid pb-5">
+        <div id="contact" class="container-fluid">
             <div class="row">
-                <div class="col-12">
-                    <h1 class="text-center text-white">How to Contact Me</h1>
+                <div class="col-4 mx-auto text-center section-title">
+                    <h2>CONTACT ME</h2>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-2 col-xl-4"></div>
-                <div class="col-md-8 col-xl-4 text-center">
+                <div class="col-12 text-center">
                     <a href="https://github.com/davidjemerson" target="blank">
                         <img src="./assets/images/ghicon.png" width="75px" alt="github" />
                     </a>|
@@ -112,25 +177,26 @@
                         <img src="./assets/images/liicon.png" width="75px" alt="linkedin" />
                     </a>|
                     <a href="https://stackoverflow.com/users/9120428/david-emerson" target="blank">
-                        <img src="./assets/images/soicon.png" width="75px" alt="linkedin" />
+                        <img src="./assets/images/soicon.png" width="75px" alt="stackoverflow" />
                     </a>|
                     <a href="mailto:david@david-emerson.com" target="blank">
-                            <img src="./assets/images/emicon.png" width="75px" alt="email" />
+                        <img src="./assets/images/emicon.png" width="75px" alt="email" />
                     </a>
                 </div>
             </div>
         </div>
     </main>
-    <footer class="text-white pt-1">
+    <footer>
         <div class="row">
-            <div class="col-12">
-                <p class="text-center text-white">&copy;2018 David Emerson | david@david-emerson.com</p>
+            <div class="col-12 text-center">
+                &copy;2018 David Emerson | david@david-emerson.com | 
             </div>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="./assets/js/jqeasing.js"></script>
     <script src="./assets/js/app.js"></script>
 </body>
 </html>
