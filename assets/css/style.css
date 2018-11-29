@@ -62,15 +62,15 @@ ul {
 }
 
 #portfolio {
-    color: white;
+    color: black;
     padding: 50px 0 50px 0;
     transition: all .5s;
 }
 
-#portfolio img {
+/* #portfolio img {
     opacity: 0;
     filter: alpha(opacity=0);
-}
+} */
 
 #portfolio.portfolio-show {
     color: black;
@@ -110,7 +110,7 @@ ul {
 }
 
 .proj-caption {
-    background-color: white;
+    background-color: #eeeeee;
     padding: 5px 0 5px 0;
     margin-bottom: 25px;
     text-align: center;   
