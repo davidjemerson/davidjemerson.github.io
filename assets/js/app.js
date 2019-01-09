@@ -138,6 +138,7 @@ $(function(o) {
         offset: 50
     });
     var a = function() {
+        50 < o("#mainNav").offset().top ? o("#hero").addClass("scrolled") : o("#hero").removeClass("scrolled"),
         50 < o("#mainNav").offset().top ? o("#mainNav").addClass("navbar-dark") : o("#mainNav").removeClass("navbar-dark"),
         50 < o("#mainNav").offset().top ? o("#mainNav").removeClass("navbar-light") : o("#mainNav").addClass("navbar-light"),
         50 < o("#mainNav").offset().top ? o("#navLogo").attr("src", "./assets/images/whitemono.png") : o("#navLogo").attr("src", "./assets/images/blackmono.png"),
