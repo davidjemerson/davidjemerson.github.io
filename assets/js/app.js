@@ -85,35 +85,42 @@ var project = [
     }
 ]
 
-// This function iterates over the project array and generates tiles based on that data
-function getProjects() {
-    var projectContainer = $("#projects");
-    for (var i = 0 ; i < project.length ; i++) {
-        var projectBlock = "<div id='" + i + "' class='mx-auto col-xl-4 col-lg-6 col-md-12 project'>" +
+$(document).ready(function() {
+    // This function iterates over the project array and generates tiles based on that data
+    getProjects = () => {
+        var projectContainer = $("#projects");
+        for (var i = 0 ; i < project.length ; i++) {
+        var projectBlock = "<div id='" + i + "' class='mx-auto col-xl-4 col-lg-6 col-md-12'><div class='project'>" +
         "<img class='img-fluid project-img' src='" + project[i].image +
         "' alt='" + project[i].title + "' /><div class='proj-caption'><h3>" + project[i].title + "</h3>" +
-        "<p>" + project[i].subtitle + "</p></div></div>";
+        "<p>" + project[i].subtitle + "</p></div></div></div>";
         projectContainer.append(projectBlock);
+        }
     }
-}
 
-getProjects();
+    getProjects()
 
-// Populates and calls the modal template when a project tile is clicked.
-$(".project").on('click', function(event) {
-    event.preventDefault();
-    var modalId = $(this).attr("id");
-    var description = "";
-    for (var j = 0 ; j < project[modalId].description.length ; j++) {
-        description += "<p>" + project[modalId].description[j] + "</p>";
-    }
-    $(".modal-title").text(project[modalId].title);
-    $("#imgLink").attr("href", project[modalId].live);
-    $("#modalImg").attr("src", project[modalId].image);
-    $("#modalDesc").html(project[modalId].description);
-    $("#githubButton").attr("href", project[modalId].github);
-    $("#liveButton").attr("href", project[modalId].live);
-    $('.modal-template').modal();
+    $(".project").mouseenter(function() {
+        $(this).addClass("focus-project");
+    })
+
+    $(".project").mouseleave(function() {
+        $(this).removeClass("focus-project");
+    })
+
+    // Populates and calls the modal template when a project tile is clicked.
+    $(".project").on('click', function(event) {
+        event.preventDefault();
+        var modalId = $(this).parent().attr("id");
+        $(".modal-title").text(project[modalId].title);
+        $("#imgLink").attr("href", project[modalId].live);
+        $("#modalImg").attr("src", project[modalId].image);
+        $("#modalDesc").html(project[modalId].description);
+        $("#githubButton").attr("href", project[modalId].github);
+        $("#liveButton").attr("href", project[modalId].live);
+        $('.modal-template').modal();
+    });
+
 });
 
 
