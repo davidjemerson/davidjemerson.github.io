@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>David Emerson</title>
-    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#666666">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#1f3434">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -32,14 +37,14 @@
             </div>
             <div class="modal-body">
                 <div class="container">
-                    <a id="imgLink" href="" target="blank">
-                        <img id="modalImg" src="" class="img-fluid" alt="rel" />
-                    </a>
-                    <div class="row mt-4">
-                        <div class="col-2"></div>
+                    <div class="row">
+                        <div class="col-4">
+                            <a id="imgLink" href="" target="blank">
+                                <img id="modalImg" src="" class="img-fluid" alt="rel" />
+                            </a>
+                        </div>
                         <div id="modalDesc" class="col-8"></div>
-                        <div class="col-2"></div>
-                    </div>
+                    </div>                    
                 </div>
             </div>
             <div class="modal-footer mx-auto">
@@ -87,18 +92,36 @@
 
     <!-- Intro Container -->
     <main>
-        <div id="about" class="container">
+        <div id="hero" class="container">
             <div class="row">
-                <div class="col-12 text-center">
-                    <h1>Full-stack web developer and problem solver</h1>
-                    <img class="mt-2 mx-auto" src="./assets/images/me.png" alt="me" width="225px"/>
+                <div class="col-lg-8 col-md-10 col-sm-12 text-center mx-auto">
+                    <h1>Need a full-stack web developer and problem solver?</h1>
+                    <a href="#about" class="js-scroll-trigger"><img src="./assets/images/arrow-down.png" width="100px"></a>
                 </div>
             </div>
+        </div>
+
+        <!-- About -->
+
+        <div id="about" class="container-fluid">
             <div class="row mt-5">
-                <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 mx-auto text-center">
-                    <p>I'm a Kansas City area based web developer who enjoys making challenging designs and intuitive interfaces a reality in the browser.</p>
-                    <p>When I'm not tinkering with the front end, I enjoy building custom data-driven solutions on the back end, bringing web application functionality to life.</p>
-                    <p>In the event my fingers aren't dancing across the keys writing code, I'm an avid gamer, woodworker, and maker of bacon.</p>
+                <div class="col">
+                    <div class="row text-center">
+                        <div class="col mb-5">
+                            <h1>I'm David, and I can help!</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-lg-3 col-12 text-center">
+                            <img class="mt-2 mx-auto pb-5" src="./assets/images/me.png" alt="me" width="225px"/>
+                        </div>
+                        <div class="col-lg-7 col-10 mx-auto">
+                            <p>I'm a Kansas City area based web developer who enjoys making challenging designs and intuitive interfaces a reality in the browser.</p>
+                            <p>When I'm not tinkering with the front end, I enjoy building custom data-driven solutions on the back end, bringing web application functionality to life.</p>
+                            <p>In the event my fingers aren't dancing across the keys writing code, I'm an avid gamer, woodworker, and maker of bacon.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -107,13 +130,13 @@
 
         <div id="skills" class="container-fluid">
             <div class="row">
-                <div class="col-4 mx-auto text-center section-title">
-                    <h2>SKILLS</h2>
+                <div class="col-lg-6 col-md-8 col-sm-10 mx-auto text-center section-title">
+                    <h2>A non-exhaustive list of things I'm good with...</h2>
                 </div>
             </div>
             <div class="row">
                 <div class="col-2"></div>
-                <div class="col-10">
+                <div class="col-10 mx-auto">
                     <div class="row">
                         <div class="col-5 text-center">
                             <h4>Front End</h4>

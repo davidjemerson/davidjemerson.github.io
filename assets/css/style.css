@@ -22,7 +22,9 @@ ul {
 
 #about {
     padding: 50px 0 50px 0;
-    margin-bottom: 100px;
+    background-color: #6fe994;
+    -webkit-clip-path: polygon(0% 0%, 100% 05%, 100% 95%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 05%, 100% 95%, 0% 100%);
 }
 
 #about p {
@@ -30,8 +32,13 @@ ul {
 }
 
 #contact {
-    background-color: #eeeeee;
     padding: 50px 0 50px 0;
+}
+
+#hero {
+    padding: 50px 0 50px 0;
+    margin-top: 200px;
+    margin-bottom: 300px;
 }
 
 #mainNav {
@@ -42,7 +49,7 @@ ul {
 #mainNav.navbar-shrink {
     padding-top: 0;
     padding-bottom: 0;
-    background-color: #75dddd;
+    background-color: #1bc83b;
     border-bottom-width: 3px;
     border-bottom-color: #333333;
     border-bottom-style: solid;
@@ -64,41 +71,17 @@ ul {
 #portfolio {
     color: black;
     padding: 50px 0 50px 0;
-    transition: all .5s;
-}
-
-/* #portfolio img {
-    opacity: 0;
-    filter: alpha(opacity=0);
-} */
-
-#portfolio.portfolio-show {
-    color: black;
-}
-
-#portfolio.portfolio-show img {
-    opacity: 1;
-    filter: alpha(opacity=100);
-}
-
-#portfolio.portfolio-show .proj-caption {
-    background-color: #eeeeee;
+    background-color: #6fe994;
 }
 
 #skills {
     color: black;
     padding: 50px 0 50px 0;
     transition: all .5s;
-    background-color: #eeeeee;
 }
 
 #skills li {
     font-size: 20px;
-}
-
-#skills.skills-show {
-    background-color: #eeeeee;
-    color: black;
 }
 
 .navbar-brand {

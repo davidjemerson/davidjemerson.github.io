@@ -138,6 +138,9 @@ $(function(o) {
         offset: 50
     });
     var a = function() {
+        50 < o("#mainNav").offset().top ? o("#mainNav").addClass("navbar-dark") : o("#mainNav").removeClass("navbar-dark"),
+        50 < o("#mainNav").offset().top ? o("#mainNav").removeClass("navbar-light") : o("#mainNav").addClass("navbar-light"),
+        50 < o("#mainNav").offset().top ? o("#navLogo").attr("src", "./assets/images/whitemono.png") : o("#navLogo").attr("src", "./assets/images/blackmono.png"),
         50 < o("#mainNav").offset().top ? o("#mainNav").addClass("navbar-shrink") : o("#mainNav").removeClass("navbar-shrink"),
         50 < o("#mainNav").offset().top ? o("#skills").addClass("skills-show") : o("#skills").removeClass("skills-show"),
         50 < o("#mainNav").offset().top ? o("#portfolio").addClass("portfolio-show") : o("#portfolio").removeClass("portfolio-show")
