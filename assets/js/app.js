@@ -85,6 +85,8 @@ var project = [
     }
 ]
 
+new Image().src = "./assets/images/whitemono.png";
+
 $(document).ready(function() {
     // This function iterates over the project array and generates tiles based on that data
     getProjects = () => {
@@ -97,6 +99,14 @@ $(document).ready(function() {
         projectContainer.append(projectBlock);
         }
     }
+
+    $("#down").mouseenter(function() {
+        $(this).addClass("glow");
+    })
+
+    $("#down").mouseleave(function() {
+        $(this).removeClass("glow");
+    })
 
     getProjects()
 
@@ -121,38 +131,36 @@ $(document).ready(function() {
         $('.modal-template').modal();
     });
 
-});
-
-
-
-$(function(o) {
-    "use strict";
-    o('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
-        if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
-            var a = o(this.hash);
-            if ((a = a.length ? a : o("[name=" + this.hash.slice(1) + "]")).length)
-                return o("html, body").animate({
-                    scrollTop: a.offset().top - 50
-                }, 1e3, "easeInOutExpo"),
-                !1
-        }
-    }),
-    o(".js-scroll-trigger").click(function() {
-        o(".navbar-collapse").collapse("hide")
-    }),
-    o("body").scrollspy({
-        target: "#mainNav",
-        offset: 50
+    $(function(o) {
+        "use strict";
+        o('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
+                var a = o(this.hash);
+                if ((a = a.length ? a : o("[name=" + this.hash.slice(1) + "]")).length)
+                    return o("html, body").animate({
+                        scrollTop: a.offset().top - 50
+                    }, 1e3, "easeInOutExpo"),
+                    !1
+            }
+        }),
+        o(".js-scroll-trigger").click(function() {
+            o(".navbar-collapse").collapse("hide")
+        }),
+        o("body").scrollspy({
+            target: "#mainNav",
+            offset: 50
+        });
+        var a = function() {
+            50 < o("#mainNav").offset().top ? o("#hero").addClass("scrolled") : o("#hero").removeClass("scrolled"),
+            50 < o("#mainNav").offset().top ? o("#mainNav").addClass("navbar-dark") : o("#mainNav").removeClass("navbar-dark"),
+            50 < o("#mainNav").offset().top ? o("#mainNav").removeClass("navbar-light") : o("#mainNav").addClass("navbar-light"),
+            50 < o("#mainNav").offset().top ? o("#navLogo").attr("src", "./assets/images/whitemono.png") : o("#navLogo").attr("src", "./assets/images/blackmono.png"),
+            50 < o("#mainNav").offset().top ? o("#mainNav").addClass("navbar-shrink") : o("#mainNav").removeClass("navbar-shrink"),
+            50 < o("#mainNav").offset().top ? o("#skills").addClass("skills-show") : o("#skills").removeClass("skills-show"),
+            50 < o("#mainNav").offset().top ? o("#portfolio").addClass("portfolio-show") : o("#portfolio").removeClass("portfolio-show")
+        };
+        a(),
+        o(window).scroll(a)
     });
-    var a = function() {
-        50 < o("#mainNav").offset().top ? o("#hero").addClass("scrolled") : o("#hero").removeClass("scrolled"),
-        50 < o("#mainNav").offset().top ? o("#mainNav").addClass("navbar-dark") : o("#mainNav").removeClass("navbar-dark"),
-        50 < o("#mainNav").offset().top ? o("#mainNav").removeClass("navbar-light") : o("#mainNav").addClass("navbar-light"),
-        50 < o("#mainNav").offset().top ? o("#navLogo").attr("src", "./assets/images/whitemono.png") : o("#navLogo").attr("src", "./assets/images/blackmono.png"),
-        50 < o("#mainNav").offset().top ? o("#mainNav").addClass("navbar-shrink") : o("#mainNav").removeClass("navbar-shrink"),
-        50 < o("#mainNav").offset().top ? o("#skills").addClass("skills-show") : o("#skills").removeClass("skills-show"),
-        50 < o("#mainNav").offset().top ? o("#portfolio").addClass("portfolio-show") : o("#portfolio").removeClass("portfolio-show")
-    };
-    a(),
-    o(window).scroll(a)
+
 });

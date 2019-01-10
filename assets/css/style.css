@@ -1,3 +1,7 @@
+html,body {
+    overflow-x: hidden; 
+}
+
 body {
     padding-top: 5em;
     font-family: 'Karla', sans-serif;
@@ -25,6 +29,7 @@ ul {
     background-color: #6fe994;
     -webkit-clip-path: polygon(0% 0%, 100% 05%, 100% 95%, 0% 100%);
     clip-path: polygon(0% 0%, 100% 05%, 100% 95%, 0% 100%);
+    text-shadow: 0px 0px 2px #18b635;
 }
 
 #about p {
@@ -42,11 +47,11 @@ ul {
     margin-bottom: 300px;
     -webkit-clip-path: polygon(0% 05%, 100% 0%, 100% 100%, 0% 95%);
     clip-path: polygon(0% 05%, 100% 0%, 100% 100%, 0% 95%);
-    transition: .3s;
 }
 
 #hero.scrolled {
     background-color: #6fe994;
+    transition: .3s;
 }
 
 #mainNav {
@@ -58,9 +63,10 @@ ul {
     padding-top: 0;
     padding-bottom: 0;
     background-color: #1bc83b;
-    border-bottom-width: 3px;
-    border-bottom-color: #333333;
+    border-bottom-width: 1px;
+    border-bottom-color: #13902a;
     border-bottom-style: solid;
+    box-shadow: 0px 0px 10px #666666;
 }
 
 #mainNav.navbar-shrink .navbar-brand {
@@ -96,9 +102,17 @@ ul {
     font-size: 20px;
 }
 
-.project.focus-project {
-    box-shadow: 0px 0px 15px #77ffa0;
-    cursor: pointer;
+#down {
+    transition: .3s;
+}
+
+#down.glow {
+    -webkit-filter: drop-shadow(0px 0px 15px #1bc83b);
+    filter: drop-shadow(0px 0px 15px #1bc83b);
+}
+
+#portTitle {
+    text-shadow: 0px 0px 2px #18b635;
 }
 
 .modal-content {
@@ -133,7 +147,12 @@ ul {
 
 .project {
     transition: .3s;
+    box-shadow: 0px 0px 15px #77ffa0;
+}
+
+.project.focus-project {
     box-shadow: 0px 0px 15px #44905b;
+    cursor: pointer;
 }
 
 .section-title {
